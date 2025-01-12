@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, yellow, orange); /* Fondo degradado amarillo a naranja */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background: url("../img/marca-agua.jpeg") no-repeat center center; /* Ruta y formato actualizados */
+    background-size: 800px 800px; /* Ajusta el tamaño de la marca de agua según necesites */
+    opacity: 0.2; /* Transparencia de la marca de agua */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: -1; /* La marca de agua queda detrás del contenido */
+}
+
+h1, p {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para texto */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #25d366; /* Verde de WhatsApp */
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851; /* Color más oscuro al pasar el mouse */
+}
+
+.whatsapp-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.facebook-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1877F2; /* Azul de Facebook */
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.facebook-button:hover {
+    background-color: #145dbf; /* Azul más oscuro al pasar el mouse */
+}
+
+.facebook-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.youtube-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #FF0000; /* Rojo de YouTube */
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.youtube-button:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
+}
+
+.youtube-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
