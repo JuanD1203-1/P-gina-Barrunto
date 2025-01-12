@@ -4,9 +4,10 @@ stages:
 pages:
   stage: deploy
   script:
-    - rm -rf public
-    - mkdir public  
-    - cp -r * public
+    - echo "Iniciando deploy de GitLab Pages"
+    - rm -rf public   # Elimina la carpeta 'public' si ya existe
+    - mkdir public     # Crea la carpeta 'public'
+    - cp -r * public   # Copia todos los archivos a la carpeta 'public'
   artifacts:
     paths:
       - public
