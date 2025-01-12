@@ -4,10 +4,10 @@ pages:
     - echo "Iniciando deploy de GitLab Pages"
     - rm -rf public
     - mkdir public
-    - shopt -s extglob  # Habilita soporte para patrones extendidos en bash
-    - cp -r !(public) public  # Copia todo excepto la carpeta 'public'
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+    - cp -r $(ls | grep -v '^public$') public
+artifacts:
+  paths:
+    - public
+  expire_in: 1 week
+only:
+  - main
