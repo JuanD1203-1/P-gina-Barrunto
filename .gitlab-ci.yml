@@ -1,13 +1,11 @@
-stages:
-  - deploy
-
 pages:
   stage: deploy
   script:
     - echo "Iniciando deploy de GitLab Pages"
-    - rm -rf public   # Elimina la carpeta 'public' si ya existe
-    - mkdir public     # Crea la carpeta 'public'
-    - cp -r * public   # Copia todos los archivos a la carpeta 'public'
+    - rm -rf public
+    - mkdir public
+    - shopt -s extglob  # Habilita soporte para patrones extendidos en bash
+    - cp -r !(public) public  # Copia todo excepto la carpeta 'public'
   artifacts:
     paths:
       - public
