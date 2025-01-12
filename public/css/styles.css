@@ -13,7 +13,7 @@ body {
 
 body::before {
     content: "";
-    background: url("../img/marca-agua.jpeg") no-repeat center center; /* Ruta y formato actualizados */
+    background: url("../img/marca-agua.jpg") no-repeat center center; /* Ruta y formato actualizados */
     background-size: 800px 800px; /* Ajusta el tamaño de la marca de agua según necesites */
     opacity: 0.2; /* Transparencia de la marca de agua */
     position: absolute;
