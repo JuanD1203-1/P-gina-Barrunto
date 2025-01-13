@@ -1,13 +1,10 @@
 pages:
   stage: deploy
   script:
-    - echo "Iniciando deploy de GitLab Pages"
-    - rm -rf public
-    - mkdir public
+    - mkdir -p public
     - cp -r * public
   artifacts:
     paths:
       - public
-    expire_in: 1 week
   only:
     - main
