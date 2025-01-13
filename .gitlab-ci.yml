@@ -4,7 +4,7 @@ pages:
     - echo "Iniciando deploy de GitLab Pages"
     - rm -rf public
     - mkdir public
-    - cp -r $(ls | grep -v '^public$') public
+    - cp -r * public
   artifacts:
     paths:
       - public
